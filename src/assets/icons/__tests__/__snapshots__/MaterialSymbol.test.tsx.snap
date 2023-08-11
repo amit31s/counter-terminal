@@ -1,0 +1,213 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Material Symbol renders with the expected styles 1`] = `
+.emotion-1 {
+  font-variation-settings: 'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 24px;
+  width: 24px;
+  font-size: 24px;
+  color: white;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-2 {
+  font-variation-settings: 'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 24px;
+  width: 24px;
+  font-size: 24px;
+  color: pink;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-3 {
+  font-variation-settings: 'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 24px;
+  width: 24px;
+  font-size: 24px;
+  color: #FFF000;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-4 {
+  font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 48;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 48px;
+  width: 48px;
+  font-size: 48px;
+  color: white;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-5 {
+  font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 48;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 48px;
+  width: 48px;
+  font-size: 48px;
+  color: pink;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-6 {
+  font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 48;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 48px;
+  width: 48px;
+  font-size: 48px;
+  color: #FFF000;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-7 {
+  font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 60;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 60px;
+  width: 60px;
+  font-size: 60px;
+  color: white;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-8 {
+  font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 60;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 60px;
+  width: 60px;
+  font-size: 60px;
+  color: pink;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.emotion-9 {
+  font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 60;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 60px;
+  width: 60px;
+  font-size: 60px;
+  color: #FFF000;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+<body>
+  <div>
+    <div
+      class="emotion-0 r-flex-13awgt0"
+    >
+      <span
+        class="material-symbols-outlined emotion-1"
+      >
+        home
+      </span>
+      <span
+        class="material-symbols-outlined emotion-2"
+      >
+        home
+      </span>
+      <span
+        class="material-symbols-outlined emotion-3"
+      >
+        home
+      </span>
+      <span
+        class="material-symbols-outlined emotion-4"
+      >
+        home
+      </span>
+      <span
+        class="material-symbols-outlined emotion-5"
+      >
+        home
+      </span>
+      <span
+        class="material-symbols-outlined emotion-6"
+      >
+        home
+      </span>
+      <span
+        class="material-symbols-outlined emotion-7"
+      >
+        home
+      </span>
+      <span
+        class="material-symbols-outlined emotion-8"
+      >
+        home
+      </span>
+      <span
+        class="material-symbols-outlined emotion-9"
+      >
+        home
+      </span>
+    </div>
+  </div>
+  <div
+    style="position: fixed; left: 0px; top: 0px; width: 0px; height: 0px; z-index: -1; overflow: hidden; visibility: hidden; transition-duration: 0.05s; transition-property: padding; transition-delay: 0s;"
+  />
+</body>
+`;

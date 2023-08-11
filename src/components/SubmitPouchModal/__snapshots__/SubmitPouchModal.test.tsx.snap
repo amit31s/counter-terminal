@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Submit Pouch Modal matches the snapshot 1`] = `
+<body
+  tabindex="-1"
+>
+  <div>
+    <div
+      class="css-view-1dbjc4n r-flex-13awgt0"
+    />
+  </div>
+  <div>
+    <div
+      class="r-animationDuration-1ielgck r-animationKeyframes-xx3c9p r-animationTimingFunction-1uypc71 r-bottom-1p0dtai r-left-1d2f490 r-opacity-6dt33c r-position-1xcajam r-right-zchlnj r-top-ipm5af r-zIndex-sfbmgh"
+    >
+      <div
+        class="r-outlineStyle-1ny4l3l"
+        role="presentation"
+        tabindex="0"
+      />
+      <div
+        class="css-view-1dbjc4n"
+      >
+        <div
+          aria-modal="true"
+          class="css-view-1dbjc4n r-backgroundColor-1niwhzg r-bottom-1p0dtai r-left-1d2f490 r-position-1xcajam r-right-zchlnj r-top-ipm5af"
+        >
+          <div
+            class="css-view-1dbjc4n r-flex-13awgt0 r-top-ipm5af"
+          >
+            <div
+              class="css-view-1dbjc4n r-bottom-1p0dtai r-left-1d2f490 r-opacity-orgf3d r-pointerEvents-12vffkv r-position-u8s1d r-right-zchlnj r-top-ipm5af"
+              style="transform: translateY(0px) translateX(0px) scale(1) scaleX(1) scaleY(1) rotate(0deg);"
+            >
+              <div
+                class="css-view-1dbjc4n r-backgroundColor-kemksi r-bottom-1p0dtai r-cursor-7q8q6z r-left-1d2f490 r-opacity-todpsx r-position-u8s1d r-right-zchlnj r-top-ipm5af r-touchAction-1otgn73"
+                tabindex="0"
+              />
+            </div>
+            <div
+              class="css-view-1dbjc4n r-bottom-1p0dtai r-left-1d2f490 r-opacity-orgf3d r-pointerEvents-12vffkv r-position-u8s1d r-right-zchlnj r-top-ipm5af"
+              style="transform: translateY(0px) translateX(0px) scale(1) scaleX(1) scaleY(1) rotate(0deg);"
+            >
+              <span
+                data-focus-scope-start="true"
+                hidden=""
+              />
+              <div
+                class="css-view-1dbjc4n r-alignItems-1awozwy r-height-1pi2tsx r-justifyContent-1777fci r-pointerEvents-12vffkv r-width-13qz1uu"
+              >
+                <div
+                  class="css-view-1dbjc4n r-backgroundColor-14lw9ot r-flexDirection-18u37iz r-width-rthrr5"
+                >
+                  <div
+                    class="css-view-1dbjc4n r-alignItems-1oszu61 r-paddingBottom-11rk87y r-paddingLeft-1hxq0ab r-paddingRight-gtt5ci r-paddingTop-fd4yh7 r-width-pl3iaz"
+                  >
+                    <div
+                      class="css-view-1dbjc4n"
+                    >
+                      <div
+                        class="css-view-1dbjc4n r-borderBottomWidth-ndvcnb r-flexDirection-18u37iz r-marginBottom-1ifxtd0 r-paddingBottom-1mdbw0j r-paddingLeft-gy4na3 r-paddingRight-9aemit r-paddingTop-wk8lta"
+                      >
+                        <div
+                          class="css-text-901oao r-color-1njgeiw r-flex-13awgt0 r-fontSize-1x35g6 r-fontStyle-13uqrnb r-fontWeight-16dba41 r-letterSpacing-oxtfae r-lineHeight-nwxazl r-textAlign-fdjqy7"
+                          data-testid="SubmitPouchTitleTestId"
+                          dir="auto"
+                        >
+                          Test Title
+                        </div>
+                      </div>
+                      <div
+                        class="css-view-1dbjc4n r-paddingBottom-1mdbw0j r-paddingLeft-gy4na3 r-paddingRight-9aemit r-paddingTop-wk8lta"
+                      >
+                        <div
+                          class="css-text-901oao r-color-1njgeiw r-fontSize-1x35g6 r-fontStyle-13uqrnb r-fontWeight-16dba41 r-letterSpacing-oxtfae r-lineHeight-2agvir r-textAlign-fdjqy7"
+                          dir="auto"
+                        >
+                          Lorem ipsum.
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="css-view-1dbjc4n r-borderTopWidth-13yce4e r-flexDirection-1euycsn r-justifyContent-1h0z5md r-marginTop-1v1z2uz r-paddingBottom-1mdbw0j r-paddingLeft-gy4na3 r-paddingRight-9aemit r-paddingTop-wk8lta"
+                      data-testid="SubmitPouchActionButtonContainerTestId"
+                    >
+                      <div
+                        aria-label="Primary Button"
+                        class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-alignSelf-1kihuf0 r-backgroundColor-1q56jx2 r-borderColor-1onh70h r-borderRadius-z2wwpe r-borderStyle-1phboty r-borderWidth-d045u9 r-cursor-1loqt21 r-height-yq7r3z r-justifyContent-1777fci r-minHeight-j5ldn5 r-paddingHorizontal-2q4g5t r-shadow-f5u5bj r-touchAction-1otgn73"
+                        data-focusvisible-polyfill="true"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <div
+                          class="css-text-901oao r-color-jwli3a r-fontFamily-v9d72p r-fontSize-1x35g6 r-fontWeight-b88u0q r-userSelect-lrvibr"
+                          dir="auto"
+                        >
+                          Primary Button
+                        </div>
+                      </div>
+                      <div
+                        aria-label="Secondary Button"
+                        class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-alignSelf-1kihuf0 r-backgroundColor-14lw9ot r-borderColor-1onh70h r-borderRadius-z2wwpe r-borderStyle-1phboty r-borderWidth-1d6rzhh r-cursor-1loqt21 r-height-yq7r3z r-justifyContent-1777fci r-marginRight-3691iy r-minHeight-j5ldn5 r-paddingHorizontal-2q4g5t r-shadow-f5u5bj r-touchAction-1otgn73"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <div
+                          class="css-text-901oao r-color-cq6wur r-fontFamily-v9d72p r-fontSize-1x35g6 r-fontWeight-b88u0q r-userSelect-lrvibr"
+                          dir="auto"
+                        >
+                          Secondary Button
+                        </div>
+                      </div>
+                      <div
+                        aria-label="other button"
+                        class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-alignSelf-1kihuf0 r-backgroundColor-14lw9ot r-borderColor-1onh70h r-borderRadius-z2wwpe r-borderStyle-1phboty r-borderWidth-1d6rzhh r-cursor-1loqt21 r-height-yq7r3z r-justifyContent-1777fci r-marginRight-3691iy r-minHeight-j5ldn5 r-paddingHorizontal-2q4g5t r-shadow-f5u5bj r-touchAction-1otgn73"
+                        role="button"
+                        tabindex="0"
+                      >
+                        <div
+                          class="css-text-901oao r-color-cq6wur r-fontFamily-v9d72p r-fontSize-1x35g6 r-fontWeight-b88u0q r-userSelect-lrvibr"
+                          dir="auto"
+                        >
+                          other button
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <span
+                data-focus-scope-end="true"
+                hidden=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="r-outlineStyle-1ny4l3l"
+        role="presentation"
+        tabindex="0"
+      />
+    </div>
+  </div>
+  <div
+    style="position: fixed; left: 0px; top: 0px; width: 0px; height: 0px; z-index: -1; overflow: hidden; visibility: hidden; transition-duration: 0.05s; transition-property: padding; transition-delay: 0s;"
+  />
+</body>
+`;

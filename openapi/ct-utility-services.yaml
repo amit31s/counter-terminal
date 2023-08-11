@@ -1,0 +1,248 @@
+openapi: 3.0.3
+info:
+  title: utility_services_counter_terminal
+  version: 0.1.0
+  description: PO Counter Terminal
+  contact:
+    name: po contact
+    email: po.contact@postoffice.co.uk
+servers:
+  - url: "http://localhost:3000"
+tags:
+  - name: "API specification for Utility Services"
+paths:
+  "/training/compliance":
+    post:
+      tags:
+        - "StoreComplianceTrainingAPI"
+      summary: "This endpoint is used to store the compliance training data into database"
+      operationId: post-compliance-data
+      responses:
+        "201":
+          description: Compliance Training Stored Successfully
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/complianceTrainingDTO"
+      description: This endpoint is used to save the compliance training data into database
+    get:
+      tags:
+        - "GetStatusComplianceTrainingAPI"
+      summary: "This endpoint is used to get status of compliance training of particular user"
+      operationId: get-compliance-data
+      parameters:
+        - in: query
+          name: userid
+          schema:
+            type: string
+          required: true
+          description: Value for user id
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/complianceTrainingResponse"
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404":
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+      description: Get Compliance Training Status.
+
+  "/receipt/list":
+    parameters:
+      - in: query
+        name: branch_id
+        schema:
+          type: string
+        required: true
+        description: Value for branch id
+      - in: query
+        name: counter_terminal_id
+        schema:
+          type: string
+        required: true
+        description: Value for Counter Terminal ID
+    get:
+      tags:
+        - "GetReceiptListAPI"
+      summary: "This endpoint is used to get the list of receipts based on counter terminal of particular branch"
+      operationId: get-receipt-data
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/ReceiptDTO"
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "401":
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404":
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+      description: Get Receipt List.
+  "/receipt/resetlist":
+    parameters:
+      - in: query
+        name: branch_id
+        schema:
+          type: string
+        required: true
+        description: Value for branch id
+    put:
+      tags:
+        - "ResetList"
+      summary: "This endpoint is used to update the datetime of receipts list based on branch id"
+      operationId: put-reset-receipt-data
+      responses:
+        "201":
+          description: Receipt reset successfully
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "404":
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+      description: Reset Receipt List.  
+
+components:
+  schemas:
+    complianceTrainingDTO:
+      title: ComplianceTrainingDTO
+      type: object
+      properties:
+        username:
+          type: string
+        status:
+          type: boolean
+      description: compliance training data
+
+    complianceTrainingResponse:
+      title: complianceTraining-Response-Data
+      type: object
+      properties:
+        status:
+          type: boolean
+      description: complianceTraining-Response-Data
+
+    ReceiptDTO:
+      title: ReceiptDTO
+      type: object
+      properties:
+        id:
+          type: string
+        transaction_amount:
+          type: number
+        branch_id:
+          type: string
+        receipt_preview:
+          $ref: "#/components/schemas/ReceiptPreviewDTO"
+        date_time:
+          type: integer
+        counter_terminal_id:
+          type: string
+      description: Receipt Data
+
+    ReceiptPreviewDTO:
+      title: ReceiptPreviewDTO
+      type: object
+      properties:
+        sub_total:
+          type: number
+        total:
+          type: number
+        vat:
+          type: number
+        items:
+          type: array
+          items:
+            $ref: "#/components/schemas/ItemDTO"
+      description: Receipt Preview Data
+
+    ItemDTO:
+      title: ItemDTO
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        type:
+          type: string
+        weight:
+          type: string
+        price:
+          type: number
+        quantity:
+          type: integer
+        total:
+          type: number
+      description: Items Data
+
+    Error:
+      title: error
+      type: object
+      properties:
+        message:
+          type: string

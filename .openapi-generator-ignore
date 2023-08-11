@@ -1,0 +1,6 @@
+src/openapi/transaction-api/api/**
+src/openapi/transaction-api/api.ts
+src/openapi/transaction-api/common.ts
+src/openapi/transaction-api/base.ts
+src/openapi/transaction-api/configuration.ts
+src/openapi/transaction-api/git_push.sh

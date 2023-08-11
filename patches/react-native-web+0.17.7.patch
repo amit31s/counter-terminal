@@ -1,0 +1,58 @@
+diff --git a/node_modules/react-native-web/dist/cjs/exports/TextInput/index.js b/node_modules/react-native-web/dist/cjs/exports/TextInput/index.js
+index 02230e9..e8f3ff0 100644
+--- a/node_modules/react-native-web/dist/cjs/exports/TextInput/index.js
++++ b/node_modules/react-native-web/dist/cjs/exports/TextInput/index.js
+@@ -84,6 +84,7 @@ var forwardPropsList = _objectSpread(_objectSpread(_objectSpread(_objectSpread(_
+   rows: true,
+   spellCheck: true,
+   value: true,
++  virtualKeyboardPolicy: true,
+   type: true
+ });
+ 
+diff --git a/node_modules/react-native-web/dist/exports/TextInput/index.js b/node_modules/react-native-web/dist/exports/TextInput/index.js
+index 233a0f0..47fbb5b 100644
+--- a/node_modules/react-native-web/dist/exports/TextInput/index.js
++++ b/node_modules/react-native-web/dist/exports/TextInput/index.js
+@@ -71,6 +71,7 @@ var forwardPropsList = _objectSpread(_objectSpread(_objectSpread(_objectSpread(_
+   rows: true,
+   spellCheck: true,
+   value: true,
++  virtualKeyboardPolicy: true,
+   type: true
+ });
+ 
+diff --git a/node_modules/react-native-web/dist/exports/TextInput/types.js.flow b/node_modules/react-native-web/dist/exports/TextInput/types.js.flow
+index 4c34c02..b51f6ad 100644
+--- a/node_modules/react-native-web/dist/exports/TextInput/types.js.flow
++++ b/node_modules/react-native-web/dist/exports/TextInput/types.js.flow
+@@ -52,4 +52,5 @@ export type TextInputProps = { ...ViewProps,
+   spellCheck?: ?boolean,
+   style?: ?GenericStyleProp<TextInputStyle>,
+   value?: ?string,
++  virtualKeyboardPolicy?: 'auto' | 'manual',
+ };
+diff --git a/node_modules/react-native-web/src/exports/TextInput/index.js b/node_modules/react-native-web/src/exports/TextInput/index.js
+index 2145ecd..b6ea6d0 100644
+--- a/node_modules/react-native-web/src/exports/TextInput/index.js
++++ b/node_modules/react-native-web/src/exports/TextInput/index.js
+@@ -72,6 +72,7 @@ const forwardPropsList = {
+   rows: true,
+   spellCheck: true,
+   value: true,
++  virtualKeyboardPolicy: true,
+   type: true
+ };
+ 
+diff --git a/node_modules/react-native-web/src/exports/TextInput/types.js b/node_modules/react-native-web/src/exports/TextInput/types.js
+index 21ca91c..f5d50b1 100644
+--- a/node_modules/react-native-web/src/exports/TextInput/types.js
++++ b/node_modules/react-native-web/src/exports/TextInput/types.js
+@@ -64,5 +62,6 @@ export type TextInputProps = {
+   selectionColor?: ?ColorValue,
+   spellCheck?: ?boolean,
+   style?: ?GenericStyleProp<TextInputStyle>,
+-  value?: ?string
++  value?: ?string,
++  virtualKeyboardPolicy?: 'auto' | 'manual'
+ };

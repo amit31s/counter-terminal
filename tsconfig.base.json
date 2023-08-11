@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@ct/*": ["./src/*"],
+      "test-utils": ["./src/common/helpers/test-utils.ts"]
+    }
+  }
+}

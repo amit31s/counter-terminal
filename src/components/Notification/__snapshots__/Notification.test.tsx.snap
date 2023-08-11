@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`notification component body text has the correct styling 1`] = `
+<div
+  class="emotion-0 r-color-1njgeiw r-fontFamily-17bz10c r-fontSize-1x35g6 r-fontStyle-13uqrnb r-fontWeight-16dba41 r-letterSpacing-oxtfae r-lineHeight-dhbnww"
+  dir="auto"
+>
+  Body
+</div>
+`;
+
+exports[`notification component component holder renders with correct styling 1`] = `
+.emotion-6 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentColor;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-size: 1.5rem;
+  color: #293462;
+  width: 32px;
+  height: 32px;
+}
+
+<div
+  class="emotion-0 r-backgroundColor-1lnj8qs r-borderColor-mzlcs0 r-borderRadius-z2wwpe r-borderWidth-rs99b7 r-flex-13awgt0 r-flexDirection-18u37iz r-justifyContent-1777fci"
+  data-testid="Suspend Basket WarningMessages TestId"
+>
+  <div
+    class="emotion-0 r-flex-1xgprpv r-margin-n96eu3 r-marginBottom-6gpygo r-marginLeft-19u6a5r r-marginRight-1b7u577 r-marginTop-1s2bzr4"
+  >
+    <div
+      class="emotion-2 r-color-1njgeiw r-fontFamily-p6yezw r-fontSize-1x35g6 r-fontStyle-13uqrnb r-fontWeight-16dba41 r-letterSpacing-oxtfae r-lineHeight-dhbnww r-textAlign-fdjqy7"
+      dir="auto"
+    >
+      Title
+    </div>
+    <div
+      class="emotion-2 r-color-1njgeiw r-fontFamily-17bz10c r-fontSize-1x35g6 r-fontStyle-13uqrnb r-fontWeight-16dba41 r-letterSpacing-oxtfae r-lineHeight-dhbnww"
+      dir="auto"
+    >
+      Body
+    </div>
+  </div>
+  <div
+    class="emotion-0 r-flex-13awgt0 r-flexDirection-18u37iz r-justifyContent-1777fci r-marginTop-1743inv"
+  >
+    <div
+      class="emotion-0 r-cursor-1loqt21 r-touchAction-1otgn73"
+      data-testid="Notification Close Icon TestId"
+      tabindex="0"
+    >
+      <svg
+        aria-hidden="true"
+        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-6"
+        data-testid="CloseIcon"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+        />
+      </svg>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`notification component title text has the correct styling 1`] = `
+<div
+  class="emotion-0 r-color-1njgeiw r-fontFamily-p6yezw r-fontSize-1x35g6 r-fontStyle-13uqrnb r-fontWeight-16dba41 r-letterSpacing-oxtfae r-lineHeight-dhbnww r-textAlign-fdjqy7"
+  dir="auto"
+>
+  Title
+</div>
+`;

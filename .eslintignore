@@ -1,0 +1,6 @@
+server/**
+config-overrides.js
+src/assets/**
+src/api/generator/endpoints
+src/api/generator/model
+!.storybook

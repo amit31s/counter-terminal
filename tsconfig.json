@@ -1,0 +1,62 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "skipLibCheck": true,
+    "target": "ESNext",
+    "lib": [
+      "ES2017",
+      "ES6",
+      "DOM.Iterable",
+      "ScriptHost",
+      "ES2016.Array.Include",
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "jsx": "react-jsx",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "declaration": true,
+    "strict": true,
+    "noFallthroughCasesInSwitch": false,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "experimentalDecorators": true,
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "types": [
+      "node",
+      "jest",
+      "@testing-library/jest-dom"
+    ]
+  },
+  "include": [
+    "src",
+    "types/*.d.ts"
+  ],
+  "exclude": [
+    "cdk.out",
+    "node_modules",
+    "dist",
+    "lib",
+    "openapi",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js",
+    "**/*.test.[tj]sx",
+    "**/*.spec.[tj]sx",
+    "**/*.stories.[tj]sx",
+    "src/api/generator/endpoints",
+    "src/api/generator/model"
+  ]
+}

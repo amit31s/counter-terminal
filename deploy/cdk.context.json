@@ -1,0 +1,15 @@
+{
+  "hosted-zone:account=588494385378:domainName=spm-dev.com:region=eu-west-2": {
+    "Id": "/hostedzone/Z06570963026ZFH5CPQVO",
+    "Name": "spm-dev.com."
+  },
+  "hosted-zone:account=588494385378:domainName=spm-dev.com:region=us-east-1": {
+    "Id": "/hostedzone/Z06570963026ZFH5CPQVO",
+    "Name": "spm-dev.com."
+  },
+  "hosted-zone:account=588494385378:domainName=spm-dev.com:region=eu-west-1": {
+    "Id": "/hostedzone/Z06570963026ZFH5CPQVO",
+    "Name": "spm-dev.com."
+  },
+  "ssm:account=588494385378:parameterName=spm-simulator-distribution-id-param:region=eu-west-2": "E2FWBWJ4MI4H8E"
+}

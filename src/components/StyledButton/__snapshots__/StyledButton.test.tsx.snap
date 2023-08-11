@@ -1,0 +1,281 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Styled button component renders correctly renders the default invertedPrimary variant correctly 1`] = `
+<body>
+  <div>
+    <div
+      class="css-view-1dbjc4n r-flex-13awgt0"
+    >
+      <div
+        aria-label="Test Button"
+        class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-alignSelf-1kihuf0 r-backgroundColor-14lw9ot r-borderColor-11mg6pl r-borderRadius-z2wwpe r-borderStyle-1phboty r-borderWidth-d045u9 r-cursor-1loqt21 r-height-yq7r3z r-justifyContent-1777fci r-minHeight-j5ldn5 r-paddingHorizontal-2q4g5t r-shadow-f5u5bj r-touchAction-1otgn73"
+        data-testid="ButtonTestId"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="css-text-901oao r-color-cq6wur r-fontFamily-v9d72p r-fontSize-1x35g6 r-fontWeight-b88u0q r-userSelect-lrvibr"
+          dir="auto"
+        >
+          Test Button
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    style="position: fixed; left: 0px; top: 0px; width: 0px; height: 0px; z-index: -1; overflow: hidden; visibility: hidden; transition-duration: 0.05s; transition-property: padding; transition-delay: 0s;"
+  />
+</body>
+`;
+
+exports[`Styled button component renders correctly renders the default invertedSecondary variant correctly 1`] = `
+<body>
+  <div>
+    <div
+      class="css-view-1dbjc4n r-flex-13awgt0"
+    >
+      <div
+        aria-label="Test Button"
+        class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-alignSelf-1kihuf0 r-backgroundColor-1niwhzg r-borderColor-11mg6pl r-borderRadius-z2wwpe r-borderStyle-1phboty r-borderWidth-d045u9 r-cursor-1loqt21 r-height-yq7r3z r-justifyContent-1777fci r-minHeight-j5ldn5 r-paddingHorizontal-2q4g5t r-shadow-f5u5bj r-touchAction-1otgn73"
+        data-testid="ButtonTestId"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="css-text-901oao r-color-jwli3a r-fontFamily-v9d72p r-fontSize-1x35g6 r-fontWeight-b88u0q r-userSelect-lrvibr"
+          dir="auto"
+        >
+          Test Button
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    style="position: fixed; left: 0px; top: 0px; width: 0px; height: 0px; z-index: -1; overflow: hidden; visibility: hidden; transition-duration: 0.05s; transition-property: padding; transition-delay: 0s;"
+  />
+</body>
+`;
+
+exports[`Styled button component renders correctly renders the default primary variant correctly 1`] = `
+<body>
+  <div>
+    <div
+      class="css-view-1dbjc4n r-flex-13awgt0"
+    >
+      <div
+        aria-label="Test Button"
+        class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-alignSelf-1kihuf0 r-backgroundColor-14imykx r-borderColor-30uafw r-borderRadius-z2wwpe r-borderStyle-1phboty r-borderWidth-d045u9 r-cursor-1loqt21 r-height-yq7r3z r-justifyContent-1777fci r-minHeight-j5ldn5 r-paddingHorizontal-2q4g5t r-shadow-f5u5bj r-touchAction-1otgn73"
+        data-testid="ButtonTestId"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="css-text-901oao r-color-jwli3a r-fontFamily-v9d72p r-fontSize-1x35g6 r-fontWeight-b88u0q r-userSelect-lrvibr"
+          dir="auto"
+        >
+          Test Button
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    style="position: fixed; left: 0px; top: 0px; width: 0px; height: 0px; z-index: -1; overflow: hidden; visibility: hidden; transition-duration: 0.05s; transition-property: padding; transition-delay: 0s;"
+  />
+</body>
+`;
+
+exports[`Styled button component renders correctly renders the default secondary variant correctly 1`] = `
+<body>
+  <div>
+    <div
+      class="css-view-1dbjc4n r-flex-13awgt0"
+    >
+      <div
+        aria-label="Test Button"
+        class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-alignSelf-1kihuf0 r-backgroundColor-14lw9ot r-borderColor-1onh70h r-borderRadius-z2wwpe r-borderStyle-1phboty r-borderWidth-d045u9 r-cursor-1loqt21 r-height-yq7r3z r-justifyContent-1777fci r-minHeight-j5ldn5 r-paddingHorizontal-2q4g5t r-shadow-f5u5bj r-touchAction-1otgn73"
+        data-testid="ButtonTestId"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="css-text-901oao r-color-cq6wur r-fontFamily-v9d72p r-fontSize-1x35g6 r-fontWeight-b88u0q r-userSelect-lrvibr"
+          dir="auto"
+        >
+          Test Button
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    style="position: fixed; left: 0px; top: 0px; width: 0px; height: 0px; z-index: -1; overflow: hidden; visibility: hidden; transition-duration: 0.05s; transition-property: padding; transition-delay: 0s;"
+  />
+</body>
+`;
+
+exports[`Styled button component renders correctly renders the default tertiary variant correctly 1`] = `
+<body>
+  <div>
+    <div
+      class="css-view-1dbjc4n r-flex-13awgt0"
+    >
+      <div
+        aria-label="Test Button"
+        class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-alignSelf-1kihuf0 r-backgroundColor-1q56jx2 r-borderColor-1onh70h r-borderRadius-z2wwpe r-borderStyle-1phboty r-borderWidth-d045u9 r-cursor-1loqt21 r-height-yq7r3z r-justifyContent-1777fci r-minHeight-j5ldn5 r-paddingHorizontal-2q4g5t r-shadow-f5u5bj r-touchAction-1otgn73"
+        data-testid="ButtonTestId"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="css-text-901oao r-color-jwli3a r-fontFamily-v9d72p r-fontSize-1x35g6 r-fontWeight-b88u0q r-userSelect-lrvibr"
+          dir="auto"
+        >
+          Test Button
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    style="position: fixed; left: 0px; top: 0px; width: 0px; height: 0px; z-index: -1; overflow: hidden; visibility: hidden; transition-duration: 0.05s; transition-property: padding; transition-delay: 0s;"
+  />
+</body>
+`;
+
+exports[`Styled button component renders correctly renders the slim invertedPrimary variant correctly 1`] = `
+<body>
+  <div>
+    <div
+      class="css-view-1dbjc4n r-flex-13awgt0"
+    >
+      <div
+        aria-label="Test Button"
+        class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-alignSelf-1kihuf0 r-backgroundColor-14lw9ot r-borderColor-11mg6pl r-borderRadius-z2wwpe r-borderStyle-1phboty r-borderWidth-d045u9 r-cursor-1loqt21 r-height-wy61xf r-justifyContent-1777fci r-minHeight-1el8sus r-paddingHorizontal-2q4g5t r-shadow-f5u5bj r-touchAction-1otgn73"
+        data-testid="ButtonTestId"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="css-text-901oao r-color-cq6wur r-fontFamily-v9d72p r-fontSize-1x35g6 r-fontWeight-b88u0q r-userSelect-lrvibr"
+          dir="auto"
+        >
+          Test Button
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    style="position: fixed; left: 0px; top: 0px; width: 0px; height: 0px; z-index: -1; overflow: hidden; visibility: hidden; transition-duration: 0.05s; transition-property: padding; transition-delay: 0s;"
+  />
+</body>
+`;
+
+exports[`Styled button component renders correctly renders the slim invertedSecondary variant correctly 1`] = `
+<body>
+  <div>
+    <div
+      class="css-view-1dbjc4n r-flex-13awgt0"
+    >
+      <div
+        aria-label="Test Button"
+        class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-alignSelf-1kihuf0 r-backgroundColor-1niwhzg r-borderColor-11mg6pl r-borderRadius-z2wwpe r-borderStyle-1phboty r-borderWidth-d045u9 r-cursor-1loqt21 r-height-wy61xf r-justifyContent-1777fci r-minHeight-1el8sus r-paddingHorizontal-2q4g5t r-shadow-f5u5bj r-touchAction-1otgn73"
+        data-testid="ButtonTestId"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="css-text-901oao r-color-jwli3a r-fontFamily-v9d72p r-fontSize-1x35g6 r-fontWeight-b88u0q r-userSelect-lrvibr"
+          dir="auto"
+        >
+          Test Button
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    style="position: fixed; left: 0px; top: 0px; width: 0px; height: 0px; z-index: -1; overflow: hidden; visibility: hidden; transition-duration: 0.05s; transition-property: padding; transition-delay: 0s;"
+  />
+</body>
+`;
+
+exports[`Styled button component renders correctly renders the slim primary variant correctly 1`] = `
+<body>
+  <div>
+    <div
+      class="css-view-1dbjc4n r-flex-13awgt0"
+    >
+      <div
+        aria-label="Test Button"
+        class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-alignSelf-1kihuf0 r-backgroundColor-14imykx r-borderColor-30uafw r-borderRadius-z2wwpe r-borderStyle-1phboty r-borderWidth-d045u9 r-cursor-1loqt21 r-height-wy61xf r-justifyContent-1777fci r-minHeight-1el8sus r-paddingHorizontal-2q4g5t r-shadow-f5u5bj r-touchAction-1otgn73"
+        data-testid="ButtonTestId"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="css-text-901oao r-color-jwli3a r-fontFamily-v9d72p r-fontSize-1x35g6 r-fontWeight-b88u0q r-userSelect-lrvibr"
+          dir="auto"
+        >
+          Test Button
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    style="position: fixed; left: 0px; top: 0px; width: 0px; height: 0px; z-index: -1; overflow: hidden; visibility: hidden; transition-duration: 0.05s; transition-property: padding; transition-delay: 0s;"
+  />
+</body>
+`;
+
+exports[`Styled button component renders correctly renders the slim secondary variant correctly 1`] = `
+<body>
+  <div>
+    <div
+      class="css-view-1dbjc4n r-flex-13awgt0"
+    >
+      <div
+        aria-label="Test Button"
+        class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-alignSelf-1kihuf0 r-backgroundColor-14lw9ot r-borderColor-1onh70h r-borderRadius-z2wwpe r-borderStyle-1phboty r-borderWidth-d045u9 r-cursor-1loqt21 r-height-wy61xf r-justifyContent-1777fci r-minHeight-1el8sus r-paddingHorizontal-2q4g5t r-shadow-f5u5bj r-touchAction-1otgn73"
+        data-testid="ButtonTestId"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="css-text-901oao r-color-cq6wur r-fontFamily-v9d72p r-fontSize-1x35g6 r-fontWeight-b88u0q r-userSelect-lrvibr"
+          dir="auto"
+        >
+          Test Button
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    style="position: fixed; left: 0px; top: 0px; width: 0px; height: 0px; z-index: -1; overflow: hidden; visibility: hidden; transition-duration: 0.05s; transition-property: padding; transition-delay: 0s;"
+  />
+</body>
+`;
+
+exports[`Styled button component renders correctly renders the slim tertiary variant correctly 1`] = `
+<body>
+  <div>
+    <div
+      class="css-view-1dbjc4n r-flex-13awgt0"
+    >
+      <div
+        aria-label="Test Button"
+        class="css-cursor-18t94o4 css-view-1dbjc4n r-alignItems-1awozwy r-alignSelf-1kihuf0 r-backgroundColor-1q56jx2 r-borderColor-1onh70h r-borderRadius-z2wwpe r-borderStyle-1phboty r-borderWidth-d045u9 r-cursor-1loqt21 r-height-wy61xf r-justifyContent-1777fci r-minHeight-1el8sus r-paddingHorizontal-2q4g5t r-shadow-f5u5bj r-touchAction-1otgn73"
+        data-testid="ButtonTestId"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="css-text-901oao r-color-jwli3a r-fontFamily-v9d72p r-fontSize-1x35g6 r-fontWeight-b88u0q r-userSelect-lrvibr"
+          dir="auto"
+        >
+          Test Button
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    style="position: fixed; left: 0px; top: 0px; width: 0px; height: 0px; z-index: -1; overflow: hidden; visibility: hidden; transition-duration: 0.05s; transition-property: padding; transition-delay: 0s;"
+  />
+</body>
+`;

@@ -1,0 +1,2 @@
+export const KEYPAD_BUTTON_HEIGHT = 96;
+export const KEYPAD_BUTTON_DISPATCH_THRESHOLD = 2;

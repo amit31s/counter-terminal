@@ -1,0 +1,9 @@
+export const LAUNCH_BO = "LAUNCH_BO";
+export const LAUNCH_CT = "LAUNCH_CT";
+export const DEEPLINK = "DEEPLINK";
+export const GET_SERIAL_NUMBER = "GET_SERIAL_NUMBER";
+export const SAVE_LOGIN_DETAILS = "SAVE_LOGIN_DETAILS";
+export const FRONTEND_LOGGER = "FRONTEND_LOGGER";
+export const ON_RESUME = "ON_RESUME";
+export const CLEAR_DATA = "CLEAR_DATA";
+export const RESTART_APP = "RESTART_APP";

@@ -1,0 +1,23 @@
+---
+inputs:
+  - inputFile: "../../integration-factory/services/transaction-api/api/v1/transactions.yaml"
+    dispute:
+      prefix: transactions
+    description:
+      append: true
+  - inputFile: "../../services/pouch-management-api/api/openapi.yaml"
+    dispute:
+      prefix: pouchManagement
+    description:
+      append: true
+  - inputFile: "./openapi/ct-utility-services.yaml"
+    dispute:
+      prefix: utilityServices
+    description:
+      append: true
+  - inputFile: "../branch-back-office/api/openapi.yaml"
+    dispute:
+      prefix: backoffice
+    description:
+      append: true
+output: "./counterTerminal.yaml"

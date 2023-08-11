@@ -1,0 +1,4 @@
+export const APP_CONFIG = {
+  SUSPEND_BASKET_EXPIRE_AT: "19:00:00",
+  JOURNEY_VERSION: "v6",
+};

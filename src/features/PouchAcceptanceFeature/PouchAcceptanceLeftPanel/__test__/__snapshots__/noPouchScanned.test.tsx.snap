@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`No pouch scanner snapshot no pouch scanner 1`] = `
+<body>
+  <div>
+    <div
+      class="css-view-1dbjc4n r-flex-13awgt0"
+    >
+      <div
+        class="css-view-1dbjc4n r-alignItems-1awozwy r-display-6koalj r-flex-13awgt0 r-justifyContent-1777fci"
+      >
+        <div
+          class="css-text-901oao r-color-1njgeiw r-fontFamily-p6yezw r-fontSize-zz5t5d r-fontStyle-13uqrnb r-fontWeight-16dba41 r-letterSpacing-oxtfae r-lineHeight-dhbnww"
+          dir="auto"
+        >
+          Scan or enter pouch barcode in
+        </div>
+        <div
+          class="css-text-901oao r-color-1njgeiw r-fontFamily-p6yezw r-fontSize-zz5t5d r-fontStyle-13uqrnb r-fontWeight-16dba41 r-letterSpacing-oxtfae r-lineHeight-dhbnww"
+          dir="auto"
+        >
+          the text box on the right.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    style="position: fixed; left: 0px; top: 0px; width: 0px; height: 0px; z-index: -1; overflow: hidden; visibility: hidden; transition-duration: 0.05s; transition-property: padding; transition-delay: 0s;"
+  />
+</body>
+`;

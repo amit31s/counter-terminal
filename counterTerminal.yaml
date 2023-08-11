@@ -1,0 +1,592 @@
+openapi: 3.0.3
+info:
+  title: BBO Accounting Location Api
+  version: 0.1.0
+  description: Accounting Location API defining how to get and modify Accounting Locations
+  contact:
+    name: po contact
+    email: po.contact@postoffice.co.uk
+servers:
+  - url: "https://api.spm-dev.com/bm-accounting-location"
+  - url: "https://api.spm-test1.com/bm-accounting-location"
+tags:
+  - name: "AccountingLocationApi"
+security:
+  - ApiGateway: []
+paths:
+  /v1/:
+    parameters:
+      - $ref: "#/components/parameters/FadcodeParam"
+    get:
+      security:
+        - ApiGateway: []
+      tags:
+        - Get Onboarded Accounting Locations
+      summary: Get a list of all Accounting Locations
+      operationId: get-accounting-locations
+      parameters:
+        - $ref: "#/components/parameters/StatusParam"
+        - $ref: "#/components/parameters/AccountingLocationTypeParam"
+      responses:
+        "200":
+          $ref: "#/components/responses/GetAccountingLocationsResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "500":
+          $ref: "#/components/responses/FailureResponse"
+
+    post:
+      security:
+        - ApiGateway: []
+      tags:
+        - Onboarded Accounting Location
+      summary: Create a new Cash Drawer Accounting Location, and creates a safe if none exist for provided fadcode
+      operationId: create-accounting-location
+      responses:
+        "201":
+          $ref: "#/components/responses/CreateAccountingLocationResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "500":
+          $ref: "#/components/responses/FailureResponse"
+  /v1/{id}:
+    parameters:
+      - $ref: "#/components/parameters/FadcodeParam"
+    get:
+      security:
+        - ApiGateway: []
+      tags:
+        - Get Onboarding Accounting Location by ID
+      summary: Get Onboarding Accounting Locations by ID
+      operationId: get-accounting-location
+      parameters:
+        - $ref: "#/components/parameters/AccountingLocationIDParam"
+        - $ref: "#/components/parameters/StatusParam"
+      responses:
+        "200":
+          $ref: "#/components/responses/GetAccountingLocationResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "404":
+          $ref: "#/components/responses/NotFound"
+        "500":
+          $ref: "#/components/responses/FailureResponse"
+  /v1/association:
+    parameters:
+      - $ref: "#/components/parameters/FadcodeParam"
+    post:
+      tags:
+        - AssociateCashDrawer
+      summary: (From Counter) Associate a Cash Drawer and Counter
+      description: Associate a Cash Drawer and Counter
+      operationId: associate-cash-drawer-counter
+      security:
+        - DeviceToken: []
+      requestBody:
+        $ref: "#/components/requestBodies/AssociateCashDrawerBody"
+      responses:
+        "200":
+          $ref: "#/components/responses/GetAssociationResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "500":
+          $ref: "#/components/responses/FailureResponse"
+  /v1/association/{associatingLocationType}/{id}:
+    parameters:
+      - $ref: "#/components/parameters/FadcodeParam"
+      - $ref: "#/components/parameters/AssociatingLocationTypeParam"
+      - $ref: "#/components/parameters/CashDrawerCounterIDParam"
+    get:
+      security:
+        - DeviceToken: []
+      tags:
+        - Get Association by ID
+      summary: Get Association by ID send device token for authorisation
+      responses:
+        "200":
+          $ref: "#/components/responses/GetAssociationResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "500":
+          $ref: "#/components/responses/FailureResponse"
+
+  /v1/association/list:
+    parameters:
+      - $ref: "#/components/parameters/FadcodeParam"
+      - $ref: "#/components/parameters/CounterIDParam"
+    get:
+      security:
+        - ApiGateway: []
+      tags:
+        - Get Association List
+      summary: Get Association List send device token for authorisation
+      description: This API will fetch all the associated counters. The counterID parameter shold be minimum of 2digits and it gives you the option to exclude the provided counterID from the response. For example if counterID=00, then it will fetch all the list of associated counters and if counterID=46, then it will exclude counter46 from the response.
+      responses:
+        "200":
+          $ref: "#/components/responses/GetAssociationListResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "500":
+          $ref: "#/components/responses/FailureResponse"
+  /v1/dissociation:
+    parameters:
+      - $ref: "#/components/parameters/FadcodeParam"
+    post:
+      security:
+        - ApiGateway: []
+      tags:
+        - DissociateCashDrawer
+      summary: Dissociate a Cash Drawer and Counter
+      operationId: dissociation-cash-drawer
+      requestBody:
+        $ref: "#/components/requestBodies/DissociateCashDrawerBody"
+      responses:
+        "200":
+          $ref: "#/components/responses/Success"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "500":
+          $ref: "#/components/responses/FailureResponse"
+  /v1/dissociation-counter:
+    parameters:
+      - $ref: "#/components/parameters/FadcodeParam"
+    post:
+      tags:
+        - DissociateCashDrawer
+      summary: (From Counter) Dissociate a Cash Drawer and Counter
+      operationId: dissociation-cash-drawer-counter
+      security:
+        - DeviceToken: []
+      requestBody:
+        $ref: "#/components/requestBodies/AssociateCashDrawerBody"
+      responses:
+        "200":
+          $ref: "#/components/responses/Success"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "500":
+          $ref: "#/components/responses/FailureResponse"
+  /v1/association/details:
+    parameters:
+      - $ref: "#/components/parameters/FadcodeParam"
+    get:
+      tags:
+        - AssociationUnassociationDetails
+      summary: (From Counter) add summary
+      operationId: get-association-unassociation-details
+      parameters:
+        - $ref: "#/components/parameters/SelfIDParam"
+      security:
+        - ApiGateway: []
+      responses:
+        "200":
+          $ref: "#/components/responses/AssociationUnAssociationListResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "403":
+          $ref: "#/components/responses/Forbidden"
+        "500":
+          $ref: "#/components/responses/FailureResponse"
+components:
+  securitySchemes:
+    ApiGateway:
+      type: apiKey
+      name: Authorization
+      in: header
+      x-amazon-apigateway-authtype: cognito_user_pools
+      x-amazon-apigateway-authorizer:
+        providerARNs:
+          - Fn::Sub: arn:aws:cognito-idp:${AWS::Region}:${AWS::AccountId}:userpool/${userpoolid}
+        type: cognito_user_pools
+    DeviceToken:
+      type: apiKey
+      name: Authorization
+      in: header
+      x-amazon-apigateway-authtype: cognito_user_pools
+      x-amazon-apigateway-authorizer:
+        providerARNs:
+          - Fn::Sub: arn:aws:cognito-idp:${AWS::Region}:${AWS::AccountId}:userpool/${userpoolid}
+  parameters:
+    FadcodeParam:
+      name: fadcode
+      in: header
+      required: true
+      schema:
+        type: string
+        pattern: ^\d{6}[\dX]$
+      description: Fadcode representing the branchID
+      example: "2314010"
+    StatusParam:
+      in: query
+      name: status
+      required: false
+      schema:
+        type: string
+        enum: [active, deactivated]
+      description: Filter by status (e.g. "active")
+      example: "active"
+    AccountingLocationTypeParam:
+      name: accountingLocationType
+      in: query
+      required: false
+      schema:
+        type: string
+        enum: [cashDrawer, safe]
+      description: Filter by accounting location type (e.g. "safe")
+      example: "safe"
+    AccountingLocationIDParam:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: string
+        pattern: ^[CS]\d\d$
+      description: Accounting Location ID
+      example: "C01"
+    CounterIDParam:
+      name: counterID
+      in: query
+      required: true
+      schema:
+        type: string
+        pattern: \d\d$
+      description: Return all counter association when 0 and exclude the counter association from when counter ID is provided.
+      example: "12"
+    SelfIDParam:
+      name: selfId
+      in: query
+      required: false
+      schema:
+        type: string
+      description: Return all counter association when 0 and exclude the counter association from when counter ID is provided.
+      example: "12"
+    AssociatingLocationTypeParam:
+      name: associatingLocationType
+      in: path
+      required: true
+      schema:
+        type: string
+        enum: [counter, cashDrawer]
+      description: Filter by counter and cash drawer
+      example: "counter"
+    CashDrawerCounterIDParam:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: string
+        pattern: C?\d\d
+      description: Accounting Location ID
+      example: ["C01", "40"]
+
+  requestBodies:
+    AssociateCashDrawerBody:
+      content:
+        application/json:
+          schema:
+            title: AssociateCashDrawerBody
+            type: object
+            properties:
+              cashDrawerID:
+                $ref: "#/components/schemas/CashDrawerID"
+            required:
+              - cashDrawerID
+    DissociateCashDrawerBody:
+      content:
+        application/json:
+          schema:
+            title: AssociateCashDrawerBody
+            type: object
+            properties:
+              cashDrawerID:
+                $ref: "#/components/schemas/CashDrawerID"
+              counterID:
+                $ref: "#/components/schemas/CounterID"
+            required:
+              - cashDrawerID
+              - counterID
+  schemas:
+    CounterID:
+      type: string
+      pattern: \d\d$
+    AccountingLocationID:
+      type: string
+      pattern: ^[CS]\d\d$
+    CashDrawerID:
+      type: string
+      pattern: ^C\d\d$
+    AccountingLocation:
+      title: AccountingLocation
+      type: object
+      properties:
+        accountingLocationID:
+          $ref: "#/components/schemas/AccountingLocationID"
+        accountingLocationName:
+          type: string
+        accountingLocationType:
+          type: string
+          enum: [cashDrawer, safe]
+        status:
+          type: string
+          enum: [active, inactive]
+        updatedBy:
+          $ref: "#/components/schemas/UpdatedBy"
+      required:
+        - accountingLocationID
+        - accountingLocationName
+        - accountingLocationType
+        - updatedBy
+        - timestamp
+    UpdatedBy:
+      title: UpdatedBy
+      type: object
+      properties:
+        smartID:
+          type: string
+        userName:
+          type: string
+        timestamp:
+          type: integer
+          format: int64
+          description: To Date as a unix timestamp in seconds
+          example: 1661037773
+    Association:
+      title: Accounting Location Association
+      type: object
+      properties:
+        counterID:
+          $ref: "#/components/schemas/CounterID"
+        counterName:
+          type: string
+        cashDrawerID:
+          $ref: "#/components/schemas/AccountingLocationID"
+        cashDrawerName:
+          type: string
+        updatedBy:
+          $ref: "#/components/schemas/UpdatedBy"
+      required:
+        - counterID
+        - counterName
+        - cashDrawerID
+        - cashDrawerName
+        - timestamp
+    AssociationListItems:
+      title: AssociationListItems
+      type: object
+      properties:
+        counterID:
+          $ref: "#/components/schemas/CounterID"
+        counterName:
+          type: string
+        accountingLocationID:
+          $ref: "#/components/schemas/AccountingLocationID"
+        accountingLocationName:
+          type: string
+      required:
+        - counterID
+        - cashDrawerID
+    Safe:
+      title: Safe
+      type: object
+      properties:
+        accountingLocationName:
+          type: string
+        accountingLocationID:
+          $ref: "#/components/schemas/AccountingLocationID"
+    AssociationList:
+      title: AssociationList
+      type: array
+      items:
+        $ref: "#/components/schemas/AssociationListItems"
+    UnassociatedListItem:
+      title: UnassociatedDrawers
+      type: object
+      properties:
+        accountingLocationID:
+          $ref: "#/components/schemas/AccountingLocationID"
+        accountingLocationName:
+          type: string
+      required:
+        - accountingLocationID
+        - accountingLocationName
+    UnassociationList:
+      title: UnassociationList
+      type: array
+      items:
+        $ref: "#/components/schemas/UnassociatedListItem"
+    AssociationUnAssociationList:
+      title: Accounting Location Association List
+      type: object
+      properties:
+        safe:
+          $ref: "#/components/schemas/Safe"
+        associated:
+          $ref: "#/components/schemas/AssociationList"
+        unassociated:
+          $ref: "#/components/schemas/UnassociationList"
+    CashDrawerAssociation:
+      title: CashDrawerAssociation
+      type: object
+      properties:
+        associatedCounterID:
+          type: string
+        associatedCounterName:
+          type: string
+        createdBySmartID:
+          type: string
+        cashDrawerID:
+          $ref: "#/components/schemas/CashDrawerID"
+        cashDrawerName:
+          type: string
+        operationType:
+          type: string
+          enum: [onboarding, association]
+        timeOfCreation:
+          type: integer
+          format: int64
+      required:
+        - associatedCounterID
+        - associatedCounterName
+        - createdBySmartID
+        - cashDrawerID
+        - cashDrawerName
+        - operationType
+        - timeOfCreation
+    ApiResponse:
+      title: ApiResponse
+      type: object
+      properties:
+        message:
+          type: string
+      required:
+        - message
+    Error:
+      type: object
+      properties:
+        message:
+          type: string
+      required:
+        - message
+      example:
+        message: error message
+  responses:
+    Success:
+      description: Operation was successful
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/ApiResponse"
+    NotFound:
+      description: Record Not found
+    BadRequest:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+    Forbidden:
+      description: The user not having the necessary permissions for a resource or needing an account of some sort, or attempting a prohibited action
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+    FailureResponse:
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+    Unauthorized:
+      description: Unauthorized request
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Error"
+    GetAccountingLocationsResponse:
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "#/components/schemas/AccountingLocation"
+    GetAssociationListResponse:
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: "#/components/schemas/Association"
+    GetAssociationResponse:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/Association"
+    GetAccountingLocationResponse:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/AccountingLocation"
+    AssociationUnAssociationListResponse:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/AssociationUnAssociationList"
+    CreateAccountingLocationResponse:
+      description: Created
+      content:
+        application/json:
+          schema:
+            title: CreateAccountingLocationResponse
+            type: object
+            properties:
+              accountingLocationID:
+                $ref: "#/components/schemas/AccountingLocationID"
+              accountingLocationName:
+                type: string
+            required:
+              - accountingLocationID
+    AssociateCashDrawerResponse:
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: "#/components/schemas/CashDrawerAssociation"

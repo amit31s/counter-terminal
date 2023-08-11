@@ -1,0 +1,226 @@
+{
+  "HK": "initial#payzone",
+  "id": "604f3f51-9595-4b59-957a-24e9bdc7a4ef",
+  "name": "initial payzone journey",
+  "SK": "V0",
+  "stages": [
+    {
+      "id": "1",
+      "steps": [
+        {
+          "id": "mailReturnButton",
+          "label": "Mail Return",
+          "next_stage_id": "2",
+          "type": "button"
+        },
+        {
+          "id": "topUpButton",
+          "label": "Top Up",
+          "next_stage_id": "5",
+          "type": "button"
+        },
+        {
+          "id": "billPaymentsButton",
+          "label": "Bill Payments",
+          "type": "button"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "steps": [
+        {
+          "conditions": [
+            {
+              "data": {
+                "articleID": "PAYZONE-RM-MAIL-RETURN"
+              },
+              "pattern": "^(XK).{11}$"
+            },
+            {
+              "data": {
+                "articleID": "PAYZONE-RM-MAIL-RETURN"
+              },
+              "pattern": "^(XV).{11}$"
+            },
+            {
+              "data": {
+                "articleID": "PAYZONE-RM-MAIL-RETURN"
+              },
+              "pattern": "^(XN).{11}$"
+            }
+          ],
+          "help_text": "This is the barcode of the item you intend to return.",
+          "id": "returnBarcode",
+          "label": "Enter return barcode",
+          "type": "capture-barcode",
+          "validation": {
+            "error": "The barcode entered is not valid for Home Shopping or Tracked Returns or International Merchandise Returns",
+            "pattern": "^(MV|MZ|TN|TQ|XK|XN|XV|YD|YT|YU|YW|YX).{11}$"
+          }
+        },
+        {
+          "help_text": "The item to be returned needs to be weighed to ensure the correct label is selected.",
+          "id": "itemWeight",
+          "label": "Enter item weight",
+          "type": "weight",
+          "validation": {
+            "max": {
+              "error": "Maximum weight is %s grams",
+              "value": 5000
+            },
+            "min": {
+              "error": "Minimum weight is %s grams",
+              "value": 100
+            }
+          }
+        },
+        {
+          "help_text": "This is your help text which can help a member of staff understand what this does.",
+          "id": "batteries",
+          "label": "Does this item contain batteries?",
+          "options": [
+            {
+              "icon_src": "https://i.ibb.co/SwsbXS0/check.png",
+              "id": "yes",
+              "label": "Yes"
+            },
+            {
+              "default": true,
+              "icon_src": "https://i.ibb.co/9rzM2JN/close-icon.png",
+              "id": "no",
+              "label": "No"
+            }
+          ],
+          "type": "question"
+        },
+        {
+          "caption": "Please ensure all is correct before continuing.",
+          "help_text": "This gives an overall view of data captured for this transaction.",
+          "id": "displayInfo",
+          "label": "Selected Data",
+          "message": "Your barcode is $returnBarcode, the article ID is $articleID, the weight is $itemWeight and you answered '$batteries' to the batteries question.",
+          "type": "information"
+        },
+        {
+          "id": "TestButton",
+          "label": "Next Page",
+          "next_stage_id": "4",
+          "type": "button"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "steps": [
+        {
+          "action": "commit",
+          "id": "printButton",
+          "label": "Print Reciept",
+          "type": "button"
+        },
+        {
+          "action": "closeBasket",
+          "id": "closeBasket",
+          "label": "Complete Journey",
+          "type": "button"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "steps": [
+        {
+          "id": "checkoutButton",
+          "label": "Checkout",
+          "next_stage_id": "3",
+          "type": "button"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "steps": [
+        {
+          "id": "vodafone",
+          "label": "Vodafone",
+          "next_stage_id": "6",
+          "type": "button"
+        },
+        {
+          "id": "o2",
+          "label": "O2",
+          "next_stage_id": "6",
+          "type": "button"
+        },
+        {
+          "id": "EE",
+          "label": "EE",
+          "next_stage_id": "6",
+          "type": "button"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "steps": [
+        {
+          "id": "5",
+          "label": "£5",
+          "next_stage_id": "7",
+          "type": "button"
+        },
+        {
+          "id": "10",
+          "label": "£10",
+          "next_stage_id": "7",
+          "type": "button"
+        },
+        {
+          "id": "20",
+          "label": "£20",
+          "next_stage_id": "7",
+          "type": "button"
+        },
+        {
+          "id": "50",
+          "label": "£50",
+          "next_stage_id": "7",
+          "type": "button"
+        },
+        {
+          "id": "100",
+          "label": "£100",
+          "next_stage_id": "7",
+          "type": "button"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "steps": [
+        {
+          "caption": "Please ensure all is correct before continuing.",
+          "help_text": "This gives an overall view of data captured for this transaction.",
+          "id": "displayInfo",
+          "label": "Selected Data",
+          "message": "The article ID is $articleID",
+          "type": "information"
+        },
+        {
+          "action": "commit",
+          "id": "printButton",
+          "label": "Generate Voucher",
+          "type": "button"
+        },
+        {
+          "action": "closeBasket",
+          "id": "closeBasket",
+          "label": "Finish",
+          "type": "button"
+        }
+      ]
+    }
+  ],
+  "terminal": "payzone"
+}
